@@ -1,0 +1,8 @@
+BusWatch.MyReceiver, BusWatch;md50708627c7e6932adbfb87ed4b2fe848b.MyReceiver
+BusWatch.MyReceiver, BusWatch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md50708627c7e6932adbfb87ed4b2fe848b.MyReceiver
+BusWatch.MyReceiver;md50708627c7e6932adbfb87ed4b2fe848b.MyReceiver
+buswatch.MyReceiver;md50708627c7e6932adbfb87ed4b2fe848b.MyReceiver
+App7.MainActivity, BusWatch;md5a45933a150fa0b5a72f78e5fe951d311.MainActivity
+App7.MainActivity, BusWatch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5a45933a150fa0b5a72f78e5fe951d311.MainActivity
+App7.MainActivity;md5a45933a150fa0b5a72f78e5fe951d311.MainActivity
+app7.MainActivity;md5a45933a150fa0b5a72f78e5fe951d311.MainActivity

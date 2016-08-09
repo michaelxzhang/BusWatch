@@ -65,9 +65,7 @@ namespace App7
     [Activity(Label = "Bus Watch", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
-        public static Buslayout lay1;
-        public static Buslayout lay2;
-        public static Buslayout lay3;
+        public static Buslayout[] lay = new Buslayout[10];
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -78,26 +76,23 @@ namespace App7
 
             LinearLayout baselayout = FindViewById<LinearLayout>(Resource.Id.linearLayout1);
 
-            lay1 = new Buslayout();
-            lay1.createview();
-            lay1.busnum.Text = "15";
-            lay1.busstop.Text = "Fishcreek LRT, stop id: 9189\r\nNext bus: ";
-            baselayout.AddView(lay1.separator);
-            baselayout.AddView(lay1.buslayout);
+            lay[0] = new Buslayout();
+            lay[0].createview();
+            baselayout.AddView(lay[0].separator);
+            baselayout.AddView(lay[0].buslayout);
 
-            lay2 = new Buslayout();
-            lay2.createview();
-            lay2.busnum.Text = "15";
-            lay2.busstop.Text = "Shawnessy LRT, stop id: 4795\r\nNext bus: ";
-            baselayout.AddView(lay2.separator);
-            baselayout.AddView(lay2.buslayout);
+            lay[1] = new Buslayout();
+            lay[1].createview();
+            baselayout.AddView(lay[1].separator);
+            baselayout.AddView(lay[1].buslayout);
 
-            lay3 = new Buslayout();
-            lay3.createview();
-            lay3.busnum.Text = "15";
-            lay3.busstop.Text = "7-11, stop id: 8232\r\nNext bus: ";
-            baselayout.AddView(lay3.separator);
-            baselayout.AddView(lay3.buslayout);
+            lay[2] = new Buslayout();
+            lay[2].createview();
+            baselayout.AddView(lay[2].separator);
+            baselayout.AddView(lay[2].buslayout);
+
+            BusWatch.CfgRW.Writecfg();
+            BusWatch.CfgRW.Readcfg();
         }
 
         [Java.Interop.Export("RefreshInfo")]
@@ -108,6 +103,7 @@ namespace App7
             SmsManager.Default.SendTextMessage("74000", null, "4795#15", null, null);
             SmsManager.Default.SendTextMessage("74000", null, "9189#15", null, null);
             SmsManager.Default.SendTextMessage("74000", null, "8232#15", null, null);
+            
         }
     }
 }

@@ -45,15 +45,15 @@ namespace BusWatch
                         timestr = splitstr[1].Split(')');
                         if(splitstr[0] == "9189")
                         {
-                            App7.MainActivity.lay1.busstop.Text += timestr[1];
+                            App7.MainActivity.lay[0].busstop.Text += timestr[1];
                         }
                         else if(splitstr[0] == "4795")
                         {
-                            App7.MainActivity.lay2.busstop.Text += timestr[1];
+                            App7.MainActivity.lay[1].busstop.Text += timestr[1];
                         }
                         else if(splitstr[0] == "8232")
                         {
-                            App7.MainActivity.lay3.busstop.Text += timestr[1];
+                            App7.MainActivity.lay[2].busstop.Text += timestr[1];
                         }
                     }
                 }
